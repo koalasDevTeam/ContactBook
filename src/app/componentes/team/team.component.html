@@ -1,0 +1,27 @@
+
+
+<h2>Equipo : {{nombre}} </h2>
+
+<h3>Filtrar por:</h3>
+<button (click)="getFavoritos()"  >favoritos</button>
+<h4>Prioridad:</h4>
+<section style="display: flex;"><div class="option-cont">
+    
+    <label for="1">1</label>
+    <input id="1" type="checkbox">
+</div>
+<div class="option-cont">
+    <label for="2">2</label>
+    <input id="2" type="checkbox">
+</div>
+<div class="option-cont">
+    <label for="3">3</label>
+    <input id="3" type="checkbox">
+</div></section>
+
+
+
+<h3>Jugadores:</h3>
+<ul>
+    <player (event)="borrar(p)" (event2)="favorito(p)"   [jugador]="p"  *ngFor="let p of jugadoresResultado"></player>
+</ul>
